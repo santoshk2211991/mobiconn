@@ -1,0 +1,14 @@
+
+{{#header-component data=userDetails}}
+{{/header-component}}
+<h1 style="margin-left:20px">My dashboard</h1>
+
+ {{#each widgetsArray as |product|}}
+ 	
+    {{#widget-card type=product}} {{/widget-card}}
+  {{/each}}
+
+{{#footer-component}}
+{{/footer-component}}
+
+{{outlet}}
