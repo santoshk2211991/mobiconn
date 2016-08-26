@@ -4,7 +4,6 @@ export default Ember.Component.extend({
 	widgetName:"",
 	init() {
     	this._super(...arguments);
-    	
   	},
 	didUpdateAttrs() {
 		this._super(...arguments);
@@ -14,7 +13,7 @@ export default Ember.Component.extend({
 	  this._super(...arguments);
 	  console.log(this.set('widgetName',this.get('type').widgetName));
 	  if(this.get('type').widgetName == 'Gmaps'){
-	  console.log(this.$().find('.content').append('<div id="map"></div>'))
+	   this.$().find('.content').append('<div id="map"></div>');
 	   var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 12.9716, lng: 77.5946},
           zoom: 10

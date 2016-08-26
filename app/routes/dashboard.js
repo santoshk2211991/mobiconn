@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import LoginSession from '../mixins/login-session';
 
+
 export default Ember.Route.extend(LoginSession,{
 	sessionDetails:"adsasd",
 	session: Ember.inject.service('session'),
