@@ -7,6 +7,7 @@ export function initialize(application) {
 
    var fbAsyncInit = function() {
     initFacebook(window.FB);
+    //loadFirebase();
     loadMaps()
   };
 
@@ -14,6 +15,7 @@ export function initialize(application) {
       initMaps();
       application.advanceReadiness();
     }
+
 
 
   loadFacebookSDK();
@@ -45,6 +47,16 @@ function loadMaps(){
   }(document, 'script', 'gmaps-sdk'));
 }
 
+function loadFirebase(){
+ (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://www.gstatic.com/firebasejs/3.3.0/firebase.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'fire-base'));
+}
+
 
 function initFacebook(FB) {
 	FB.init({
@@ -56,9 +68,11 @@ function initFacebook(FB) {
 	});
 }
 
-function initMaps(){
 
- 
+
+function initMaps()
+{
+
 }
 
 export default {
