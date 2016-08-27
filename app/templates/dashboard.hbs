@@ -2,6 +2,7 @@
 {{#header-component data=userDetails}}
 {{/header-component}}
 <h1 style="margin-left:20px">My dashboard</h1>
+   <button type="submit" class="btn btn-default" id="logout" {{action 'click_logout'}}>Logout</button>
 
  {{#each widgetsArray as |product|}}
  	

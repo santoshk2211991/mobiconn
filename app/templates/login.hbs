@@ -7,21 +7,42 @@
                  <h2 class="text-center">Login Page</h2>
                 <br/>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="userid" placeholder="User id">
+                   {{input type="email" class="form-control" placeholder="User id" valueBinding="email"}}
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Password">
-                
+                     {{input type="password" class="form-control" placeholder="User id" valueBinding="passwd"}} 
                     </div>
                     <br/>
                    <div class="align-center">
-                <button type="submit" class="btn btn-default" id="login" {{action 'click_login'}}>Login</button>
+                <button type="submit" class="btn btn-default" id="login" {{action 'click_login'}}>FB Login</button>
+                <button type="submit" class="btn btn-default" id="login" {{action 'click_login' true}}>Login</button>
                     </div>
             </form>
         </div>
     </div>
 </div>
         
+
+<div class="container register">
+    <div class="row">
+        <div class="form_bg">
+            <form>
+                 <h2 class="text-center">Registeration Page</h2>
+                <br/>
+                <div class="form-group">
+                    {{input type="email" class="form-control" placeholder="User id" valueBinding="emailid"}}
+                </div>
+                <div class="form-group">
+                     {{input type="password" class="form-control" placeholder="User id" valueBinding="pwd"}} 
+                    </div>
+                    <br/>
+                   <div class="align-center">
+                <button type="submit" class="btn btn-default" id="login" {{action 'click_sample'}}>Register</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>        
         
         
         

@@ -7,16 +7,30 @@ export default Ember.Route.extend(LoginSession,{
 	session: Ember.inject.service('session'),
 
 	init:function(){
-		console.log(this.get('session'))
 		var self=this;
-		this.initLogin().then(function(data){
-			if(data.msg === "Failure")
-				self.transitionTo('login')
-	
-		});
+
+			try{
+			this.initLogin().then(function(data){
+				console.log(data);
+				if(data.msg === "Failure")
+					self.transitionTo('login');
+			});
+			}catch(ex){
+
+			}
 		
 	},
 	model: function() {
        
+    },
+    actions:{
+
+    	click_logout:function(){
+    		var self = this;
+    		this.logout().then(function(data){
+    			if(data.msg === "Success")
+					self.transitionTo('login');
+    		})
+    	}
     }
 });

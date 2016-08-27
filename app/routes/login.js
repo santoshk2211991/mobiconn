@@ -8,20 +8,23 @@ export default Ember.Route.extend(LoginSession,{
 	},
 	init:function(){
 		var self=this;
+		
 		console.log(this.initLogin().then(function(data){
 			if(data.msg === "Success")
 				self.transitionTo('dashboard')
 		}));
-		
+
+
+	
+		firebase.auth().onAuthStateChanged(function(user) {
+			  if (user) {
+			  		self.set('loginType','firebase');
+					self.transitionTo('dashboard');
+			  } 
+		});			
 	},
 	actions:{
-		click_login:function(){
-			var self=this;
-			this.click_mixin().then(function(data){
-				if(data.msg === "Success")
-				self.transitionTo('dashboard')
-			});
-		}
+		
 	}	
 });
 
