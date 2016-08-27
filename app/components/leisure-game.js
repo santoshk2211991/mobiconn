@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 	gamePositionsArray:[],
 	gameNumbersArray:[],
 	init() {
-    	this._super(...arguments);
+    	this._super(...arguments); 
   	},
 	didUpdateAttrs() {
 		this._super(...arguments);
