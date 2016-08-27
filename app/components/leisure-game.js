@@ -20,7 +20,6 @@ export default Ember.Component.extend({
 		let game_y= this.get('GAME_LEVEL_BOX_Y') * level;
 		let game_markup="";
 		let columns = this.get('GAME_UI_COLUMN')/game_x;
-
 		for(var i=1;i<=(game_x*game_y);i++){
 			game_markup+="<div class='col-lg-"+columns+" grid-randy' id='randy-"+i+"' {{action 'startgame'}}></div>"; 
 		}
