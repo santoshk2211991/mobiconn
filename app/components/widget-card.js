@@ -40,6 +40,9 @@ export default Ember.Component.extend({
 
 	   this.$().find('.content').append('<h3 style="z-index:1000000"> Distance Between your points'+ uiDistance + "Kms  </h3>");
 	  }
+	  else{
+		  //this.$().find('.content').append('{{'+this.get('type').widgetID+'}}');
+	  }
 	},
 
 });

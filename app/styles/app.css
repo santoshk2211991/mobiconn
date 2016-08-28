@@ -123,8 +123,6 @@ body{margin-top:-20px !important;}
 }
 
 
-
-
 .ui-sortable-placeholder {
 	border: 1px dotted black;
 	visibility: visible !important;
@@ -152,4 +150,27 @@ li.ui-sortable-placeholder {
     line-height: 3em;
     font-weight: bold;
     font-size:14px;
+}
+
+
+.axis path, .axis line{
+	fill: none;
+	stroke: #777;
+	shape-rendering: crispEdges;
+}
+        
+.axis text{
+	font-family: 'Arial';
+	font-size: 13px;
+}
+.tick{
+	stroke-dasharray: 1, 2;
+}
+.bar{
+	fill: FireBrick;
+}
+
+#visualisation{
+	 width:400px;
+	 height:250px;
 }
