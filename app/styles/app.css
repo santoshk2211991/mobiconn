@@ -20,8 +20,9 @@ body{margin-top:-20px !important;}
     margin: 0 10px 0 10px;
     overflow: hidden;
     float:left;
-    width : 350px;
+    min-width : 350px;  /*Santosh*/
     min-height:265px;
+    /*height:auto;*/    /*Santosh*/
 }
 .widget-maximize {
     z-index: 9999;
@@ -109,7 +110,9 @@ body{margin-top:-20px !important;}
     border-top: 0;
     clear: right;
     padding: 7px;   
-    min-height:300px;
+    /*min-height:300px;*/       /*Santosh*/
+    overflow: hidden;
+    /*height: auto;*/           /*Santosh*/
 }
 /*adds top border to first child of content*/
  .content>:first-child {
