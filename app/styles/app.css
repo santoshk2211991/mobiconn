@@ -153,3 +153,27 @@ li.ui-sortable-placeholder {
     font-weight: bold;
     font-size:14px;
 }
+
+/*D3 chart*/
+
+.axis path, .axis line{
+    fill: none;
+    stroke: #777;
+    shape-rendering: crispEdges;
+}
+        
+.axis text{
+    font-family: 'Arial';
+    font-size: 13px;
+}
+.tick{
+    stroke-dasharray: 1, 2;
+}
+.bar{
+    fill: FireBrick;
+}
+
+#visualisation{
+     width:400px;
+     height:250px;
+}
