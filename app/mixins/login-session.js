@@ -5,6 +5,7 @@ export default Ember.Mixin.create({
 	userDetails:Em.Object.create({}),
 	session: Ember.inject.service('session'),
 	loginType:null,
+	dbRef:null,
 
 	initLogin:function(){
 	var self=this;
@@ -119,7 +120,7 @@ export default Ember.Mixin.create({
 	},
 	init:function(){
 		this._super(...arguments);
-		console.log("geree")
+		this.set("dbRef",firebase.database().ref());
 	}
 	
 

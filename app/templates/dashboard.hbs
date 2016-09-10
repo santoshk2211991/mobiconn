@@ -12,9 +12,20 @@
 
 
   {{#widget-card type=sample}} 
-  	{{#leisure-game }}{{/leisure-game}}
+  	{{#leisure-game}}{{/leisure-game}}
+  {{/widget-card}}
+
+  {{#widget-card type=cloud}} 
+  	{{#cloud-component }}
+  		{{#bar-chart-component register-as=someParentRelevantName }}{{/bar-chart-component}}
+  	{{/cloud-component}}
   {{/widget-card}}
  
+ {{#widget-card type=location}} 
+ 	{{#location-component}}
+  		{{#pie-chart-component}}{{/pie-chart-component}}
+  	{{/location-component}}
+  {{/widget-card}}
 
 {{#footer-component}}
 {{/footer-component}}

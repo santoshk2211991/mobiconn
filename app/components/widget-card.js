@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	widgetName:"",
+	
 	init() {
     	this._super(...arguments);
   	},
@@ -40,6 +41,6 @@ export default Ember.Component.extend({
 
 	   this.$().find('.content').append('<h3 style="z-index:1000000"> Distance Between your points'+ uiDistance + "Kms  </h3>");
 	  }
-	},
+	}
 
 });
